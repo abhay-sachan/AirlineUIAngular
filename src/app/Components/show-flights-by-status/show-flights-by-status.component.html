@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <ul class="horizontal">
+        <li class="li"><a routerLink="/ShowCustomerBookings">All Bookings</a></li>
+        <li class="li"><a routerLink="/ShowFlightsByStatus">Running Flights</a></li>
+        <li class="li"><a routerLink="/ChangePassword">Change Password</a></li>
+    </ul>
+</div>
+<div class="container-fluid">
+<table class="table table-hover table-striped table-bordered table-primary">
+    <tbody>
+    <tr>   
+    <th>Flight Id</th>
+    <th>Company Name</th>
+    <th>From City</th>
+    <th>To City</th>
+    <th>Available Seats</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Pickup Time</th>
+    <th>Drop Time</th>
+
+    </tr> 
+    <tr *ngFor="let i of data">
+    <td>{{i.flightId}}</td>
+    <td>{{i.companyName}}</td>
+    <td>{{i.fromCity}}</td>
+    <td>{{i.toCity}}</td>
+    <td>{{i.availableSeats}}</td>
+    <td>{{i.price}}</td>
+    <td>{{i.status}}</td>
+    <td>{{i.pickTime}}</td>
+    <td>{{i.dropTime}}</td>
+</tr>    
+</tbody>
+</table>
+</div>

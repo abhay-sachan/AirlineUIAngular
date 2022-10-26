@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <ul class="horizontal">
+        <li class="li"><a routerLink="/AddRoute">Add Route</a></li>
+        <li class="li"><a routerLink="/DeleteRoute">Delete Route</a></li>
+        <li class="li"><a routerLink="/ShowAllBookings">All Bookings</a></li>
+        <li class="li"><a routerLink="/ShowAllRoutes">All Routes</a></li>
+        <li class="li"><a routerLink="/ShowAllFlights">All Flights</a></li>
+    </ul>
+</div>
+<div class="container-fluid">
+<table class="table table-hover table-striped table-bordered table-primary">
+    <tbody>
+    <tr>   
+    <th>Booking Id</th>
+    <th>Flight Id</th>
+    <th>Customer Name</th>
+    <th>Email Id</th>
+    <th>Booked Seats</th>
+    <th>Total Price</th>
+    </tr> 
+    <tr *ngFor="let i of data">
+    <td>{{i.bookingId}}</td>
+    <td>{{i.flightId}}</td>
+    <td>{{i.customerName}}</td>
+    <td>{{i.emailId}}</td>
+    <td>{{i.bookedSeats}}</td>
+    <td>{{i.discountedPrice}}</td>
+</tr>    
+</tbody>
+</table>
+</div>

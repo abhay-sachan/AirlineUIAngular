@@ -1,0 +1,22 @@
+<div  class="container-fluid container-sm " >
+<form [formGroup]="loginform" class="was-validated form-inline" (ngSubmit)="Authenticate()">
+
+    <table class="table table-hover table-striped table-bordered table-primary">
+        <tbody>
+            <tr class="form-group">
+                <td>Enter Email</td>
+                <td ><input class="form-control" type="text" formControlName="email" required placeholder="Enter email"/></td>
+                
+            </tr>
+            <tr class="form-group">
+                <td >Enter Password</td>
+                <td ><input class="form-control" type="password" formControlName="pwd" required placeholder="Enter password"/></td>
+            </tr>
+            <tr class="form-group">
+                <td><input type="submit" [disabled]="loginform.invalid" class="btn btn-success" value="Login"></td>
+                <td><input type="reset" class="btn btn-danger" /></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</div>

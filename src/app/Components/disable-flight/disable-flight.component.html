@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <ul class="horizontal">
+        <li class="li"><a routerLink="/AddFlight">Add Flight</a></li>
+        <li class="li"><a routerLink="/DisableFlight">Disable Flight</a></li>
+        <li class="li"><a routerLink="/ShowAllFlightsOfAdmin">Your Flights</a></li>
+        <li class="li"><a routerLink="/ChangePassword">Change Password</a></li>
+    </ul>
+</div>
+<div class="container-fluid">
+    <form [formGroup] = "disableflightform" (ngSubmit) = "DisableFlight()"> 
+    <table class="table table-hover table-striped table-bordered table-primary">
+        <tbody>
+        <tr>   
+        <th>Flight Id</th>
+        <th>Company Name</th>
+        <th>From City</th>
+        <th>To City</th>
+        <th>Available Seats</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Pickup Time</th>
+        <th>Drop Time</th>
+        </tr> 
+        <tr *ngFor="let i of data">
+        <td>{{i.flightId}}</td>
+        <td>{{i.companyName}}</td>
+        <td>{{i.fromCity}}</td>
+        <td>{{i.toCity}}</td>
+        <td>{{i.availableSeats}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.status}}</td>
+        <td>{{i.pickTime}}</td>
+        <td>{{i.dropTime}}</td>
+    </tr> 
+    <tr>
+        <td colspan="3"><label>Enter Flight Id&nbsp;: </label><input type="number" formControlName="fid" required/></td>
+        <td colspan="3"><button type="submit" [disabled] = "disableflightform.invalid" class="btn btn-success">Enable</button></td>
+        <td colspan="3"><button type="submit" [disabled] = "disableflightform.invalid" class="btn btn-danger">Disable</button></td>
+    </tr>   
+    </tbody>
+    </table>
+    </form>
+    </div>

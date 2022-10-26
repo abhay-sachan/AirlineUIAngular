@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <h2 class="text-danger" style="text-align: center ;">New Registration Form</h2>
+    <form [formGroup]="newregform" class="was-validate form-inline" (ngSubmit)="NewUser()" >
+        <table class="table table-hover table-striped table-bordered table-primary">
+            <tbody>
+                <tr class="form-group">
+                    <td>Enter Email Id : </td>
+                    <td><input type="text" class="form-control" formControlName="email" required /> </td>
+                </tr>
+                <tr class="form-group">
+                    <td>Enter Password : </td>
+                    <td><input type="password" class="form-control" formControlName="pwd" required /> </td>
+                </tr>
+                <tr class="form-group">
+                    <td>Enter UserType : </td>
+                    <td> <select class="form-control" formControlName="user" required>
+                        <option value="Customer">Customer</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="submit" [disabled]="newregform.invalid" value="Register" class="btn btn-success"/></td>
+                    <td><input type="reset" class="btn btn-danger" /> </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

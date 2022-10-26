@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+body
+    {
+     margin:0px;
+     height:100%;
+     width:100%;
+     background:url('assets/Images/bg.jpg')no-repeat center center fixed; 
+     -webkit-background-size:cover;
+     -o-background-size:cover;
+     -moz-background-size:cover;
+     background-size:cover;
+    }    
+
+    .horizontal{
+        list-style-type: none; /*this will remove the default bullet in the UL */
+        margin: 0;
+        padding:0;
+        overflow: hidden;
+        background-color:black;
+      }
+      
+      .li{
+        float: left;
+      }
+      
+      .li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding:14px 16px;/*from the top margin there should be 14px space and between each element there should be space of 16px*/
+        text-decoration: none;/*it will remove the underline for the text given in the anchor tag*/
+      
+      }
+      
+      .li a:hover{
+        background-color: yellow;
+        color:black;
+      }    
