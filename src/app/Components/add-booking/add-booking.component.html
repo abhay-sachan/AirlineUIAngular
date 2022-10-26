@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h2 class="text-danger" style="text-align: center ;">Add Booking</h2>
+    <form [formGroup]="newbookingform" class="was-validate form-inline" (ngSubmit)="AddBooking()" >
+        <table class="table table-hover table-striped table-bordered table-primary">
+            <tbody>
+                <tr class="form-group">
+                    <td>Flight Id</td>
+                    <td><input type="text" class="form-control" formControlName="fid" readonly /> </td>
+                </tr>
+                <tr class="form-group">
+                    <td>Email Id</td>
+                    <td><input type="text" class="form-control" formControlName="email" readonly /> </td>
+                </tr>
+                <tr class="form-group">
+                    <td>Customer Name</td>
+                    <td><input type="text" class="form-control" formControlName="cname" required /> </td>
+                </tr>
+                <tr>
+                    <td>Number Of Seats</td>
+                    <td><input type="number" class="form-control" formControlName="nofseats" required /> </td>
+                </tr> 
+                <tr>
+                    <td colspan="2"><input type="submit" [disabled]="newbookingform.invalid" value="Add Booking" class="btn btn-success"/></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddBookingComponent } from './Components/add-booking/add-booking.component';
 import { AddFlightComponent } from './Components/add-flight/add-flight.component';
 import { AddRouteComponent } from './Components/add-route/add-route.component';
 import { AdminMenuComponent } from './Components/admin-menu/admin-menu.component';
@@ -16,8 +17,10 @@ import { ShowAllBookingsComponent } from './Components/show-all-bookings/show-al
 import { ShowAllFlightsComponent } from './Components/show-all-flights/show-all-flights.component';
 import { ShowAllRouteComponent } from './Components/show-all-route/show-all-route.component';
 import { ShowCustomerBookingsComponent } from './Components/show-customer-bookings/show-customer-bookings.component';
+import { ShowFilghtsByFromAndToComponent } from './Components/show-filghts-by-from-and-to/show-filghts-by-from-and-to.component';
 import { ShowFlightsByStatusComponent } from './Components/show-flights-by-status/show-flights-by-status.component';
 import { ShowFlightsOfAdminComponent } from './Components/show-flights-of-admin/show-flights-of-admin.component';
+import { ShowLatestBookingComponent } from './Components/show-latest-booking/show-latest-booking.component';
 
 const routes: Routes = [
   {path:'AddRoute',component:AddRouteComponent},
@@ -39,6 +42,10 @@ const routes: Routes = [
   {path:'ShowFlightsByStatus',component:ShowFlightsByStatusComponent},
   {path:'ChangePassword',component:ChangePasswordComponent},
   {path:'Seats',component:SeatsComponent},
+  {path:'CustomerBooking',component:ShowFilghtsByFromAndToComponent},
+  {path:'BookingPage',component:AddBookingComponent},
+  {path:'PaymentPage',component:ShowLatestBookingComponent},
+
 ];
 
 @NgModule({

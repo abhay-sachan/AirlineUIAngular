@@ -19,6 +19,6 @@ export class SeatsComponent implements OnInit {
   ngOnInit(): void {
   }
   seat():void{
-    this.router.navigate(["Login"])
+    this.router.navigate(["BookingPage"]);
   }
 }

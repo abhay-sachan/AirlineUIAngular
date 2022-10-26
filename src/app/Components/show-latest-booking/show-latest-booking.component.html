@@ -1,1 +1,45 @@
-<p>show-latest-booking works!</p>
+<div class="container-fluid">
+    <ul class="horizontal">
+        <li class="li"><a routerLink="/CustomerBooking">Book Ticket</a></li>
+        <li class="li"><a routerLink="/ShowCustomerBookings">All Bookings</a></li>
+        <li class="li"><a routerLink="/ShowFlightsByStatus">Running Flights</a></li>
+        <li class="li"><a routerLink="/ChangePassword">Change Password</a></li> 
+    </ul>
+</div>
+<div class="container-fluid">
+    <table class="table table-hover table-striped table-bordered table-primary">
+        <tbody>
+        <tr>   
+        <th>Booking Id</th>
+        <td>{{data.bookingId}}</td>
+        <tr>
+        <th>Flight Id</th>
+        <td>{{data.flightId}}</td>
+        </tr>
+        <tr>
+        <th>Customer Name</th>
+        <td>{{data.customerName}}</td>
+        </tr>  
+        <tr>
+        <th>Email Id</th>
+        <td>{{data.emailId}}</td>
+        </tr>
+        <tr>
+        <th>Booked Seats</th>
+        <td>{{data.bookedSeats}}</td>
+        </tr>   
+        <tr>
+        <th>Total Price</th>
+        <td><del>{{data.totalPrice}}</del></td>
+        </tr>    
+        <tr>
+        <th colspan="2" style="text-align: center;">{{data.discount}} % has been Applied to your Booking</th>
+        </tr>    
+        <tr>
+        <th>Final Price</th>
+        <td>{{data.discountedPrice}}</td>
+        </tr>    
+
+    </tbody>
+    </table>
+    </div>

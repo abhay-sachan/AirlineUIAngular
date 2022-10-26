@@ -1,4 +1,4 @@
-<form [formGroup]="SelectSeats"(ngSubmit)="seat()">
+<form [formGroup]="SelectSeats">
     
     <div class="plane">
         <div class="cockpit">
@@ -293,11 +293,7 @@
     
         </div>
     </div>
-    
-    
-    
-    
     <div class="center">
-        <Button variant="contained" onClick={this.Bookseat}>Book Now</Button>
+        <Button variant="contained" (click)="seat()" class="btn btn-danger">Book Now</Button>
     </div>
     </form>
